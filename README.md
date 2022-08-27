@@ -1,1 +1,1 @@
-# -2022_practice_odin-landing_page
+# 2022_practice_odin-landing_page
