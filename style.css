@@ -1,5 +1,9 @@
-* {
+/* * {
   outline: 1px solid red;
+} */
+
+:root {
+  --main-width: 1000px;
 }
 
 html,
@@ -7,7 +11,8 @@ body,
 p,
 h1,
 h2,
-h5 {
+h5,
+blockquote {
   margin: 0;
   padding: 0;
   font-family: "Poppins", sans-serif;
@@ -19,12 +24,15 @@ body {
 
 header {
   height: 60px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-left: 20px;
-  padding-right: 20px;
   background-color: lightcoral;
+  display: flex;
+  justify-content: center;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  width: var(--main-width);
 }
 
 .logo {
@@ -46,30 +54,20 @@ header {
   font-size: 50px;
 }
 
-nav ul {
-  list-style-type: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul a {
-  text-decoration: none;
-  font-weight: 300;
-  font-size: 20px;
-  color: black;
-}
-
-nav ul a:hover {
-  font-weight: 400;
-}
-
 .first {
+  background-color: lightcoral;
+  display: flex;
+  justify-content: center;
+}
+
+.first-container {
+  width: var(--main-width);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 300px;
-  background-color: lightcoral;
-  padding: 40px;
-  gap: 30px;
+  grid-template-rows: 250px;
+
+  padding: 120px 20px;
+  gap: 150px;
 }
 
 .first__left {
@@ -95,19 +93,24 @@ nav ul a:hover {
   border-radius: 5px;
 }
 
+.two {
+  min-height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
 .two .title {
   text-align: center;
-  margin: 40px auto;
-  font-size: 30px;
+  font-size: 40px;
   font-weight: 500;
 }
 
 .two .cards-container {
+  width: var(--main-width);
   display: flex;
-  justify-content: center;
-  gap: 100px;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
+  justify-content: space-between;
 }
 
 .two .card {
@@ -138,8 +141,13 @@ nav ul a:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-color: lightgray;
   height: 300px;
+}
+
+.three figure {
+  max-width: var(--main-width);
 }
 
 .three blockquote {
@@ -150,27 +158,34 @@ nav ul a:hover {
   text-align: right;
   font-weight: 400;
   font-size: 20px;
+  margin-top: 20px;
   padding-right: 50px;
 }
 
 .four {
-  margin: 40px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
 }
 
 .four .container {
+  width: var(--main-width);
+  height: 200px;
   background-color: lightcoral;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+  align-items: center;
   border-radius: 5px;
 }
 
 .four .left h5 {
-  font-size: 20px;
-  padding: 10px 20px;
+  font-size: 40px;
+  padding: 5px 20px;
 }
 
 .four .left p {
-  padding: 10px 20px;
+  padding: 5px 20px;
 }
 
 .four .right {
@@ -182,7 +197,7 @@ nav ul a:hover {
 
 .four .right button {
   font-family: "Poppins", sans-serif;
-  font-size: 20px;
+  font-size: 30px;
   border-radius: 5px;
   border: none;
   padding: 10px 30px;
