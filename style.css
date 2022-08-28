@@ -210,6 +210,18 @@ footer {
   background-color: lightgray;
 }
 
+button {
+  transition: color 0.2s, transform 0.1s;
+}
+
+button:hover {
+  color: lightcoral;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
 @media screen and (max-width: 1060px) {
   :root {
     --main-width: 800px;
